@@ -1,6 +1,6 @@
-# Accessibility Audit Report — Tendios Bid
+# Análisis Económico de Licitaciones TI — España 2025
 
-A comprehensive accessibility audit report for the Tendios Bid application, documenting WCAG 2.1 Level AA compliance findings across 21 pages.
+An interactive economic analysis report of IT public tenders in Spain for 2025, providing comprehensive insights into market trends, budget distribution, and procurement patterns.
 
 ## 🌐 Live Report
 
@@ -8,27 +8,30 @@ Visit the live report at: **[https://tendios.github.io/report-tenders/](https://
 
 ## 📋 Overview
 
-This report documents accessibility issues found during an audit of the **Tendios Bid** application ([bid.tendios.com](https://bid.tendios.com)). All findings are mapped to WCAG 2.1 success criteria and categorized by severity:
+This report presents a detailed economic analysis of **IT public tenders** in Spain during 2025. The interactive dashboard allows you to explore:
 
-- 🔴 **Critical** — High impact issues that must be fixed first
-- 🟠 **Moderate** — Significant barriers to accessibility
-- 🟡 **Minor** — Low-severity issues
+- 💰 **Budget Distribution** — Total tender values and budget allocation across different categories
+- 📊 **Market Trends** — Temporal analysis of tender publication and award patterns
+- 🏢 **Contracting Bodies** — Analysis of public entities issuing tenders
+- 🏆 **Award Analysis** — Insights into tender awards and winning companies
+- 📈 **Statistical Insights** — Key metrics and performance indicators
 
-## 🎯 Audit Details
+## 🎯 Report Details
 
-- **Initial Audit Date:** 3 March 2026
-- **Extended Audit Date:** 4 March 2026
-- **Auditor:** Thomas Baradel
-- **Standard:** WCAG 2.1 Level AA
-- **Pages Audited:** 21 pages across main app, settings, and application pages
+- **Period Analyzed:** 2025 (full year)
+- **Data Source:** Spanish public procurement platforms
+- **Total Tenders:** 1,000+ IT-related public tenders
+- **Categories Covered:** Software, Hardware, Services, Consulting, and more
+- **Geographic Scope:** All regions of Spain
 
 ## ✨ Features
 
-- **Interactive Navigation** — Sidebar navigation with active section highlighting
-- **Search Functionality** — Filter issues by keyword, page, or WCAG criterion
+- **Interactive Filters** — Filter tenders by year, budget range, category, status, and more
+- **Dynamic Charts** — Visualize data with interactive Chart.js graphs
+- **Search Functionality** — Search across tender titles, contracting bodies, and companies
 - **Responsive Design** — Works seamlessly on desktop, tablet, and mobile
-- **Print-Friendly** — Optimized styles for printing or PDF export
-- **Organized Structure** — Issues grouped by page with clear severity badges
+- **Data Export** — Export filtered results for further analysis
+- **Real-time Statistics** — Live calculation of totals, averages, and key metrics
 
 ## 🚀 Deployment
 
@@ -82,13 +85,23 @@ Then visit `http://localhost:8000` in your browser.
 
 ```
 report-tenders/
-├── index.html          # Main report (self-contained)
+├── index.html          # Main interactive report (self-contained with embedded data)
 ├── LICENSE            # MIT License
 ├── README.md          # This file
 └── .github/
     └── workflows/
         └── deploy.yml # GitHub Actions deployment workflow
 ```
+
+## 📊 Data Structure
+
+The report includes comprehensive data for each tender:
+- **Basic Info:** Title, reference number, publication date
+- **Financial:** Budget amount, award value, savings percentage
+- **Entities:** Contracting body, winning company
+- **Classification:** Category, subcategory, procurement type
+- **Status:** Published, awarded, cancelled, etc.
+- **Geographic:** Region, province, municipality
 
 ## 🌍 Custom Domain Setup
 
@@ -109,26 +122,31 @@ TTL: 3600
 
 ## 📝 Updating the Report
 
-The report is a single self-contained HTML file. To update:
+The report is a single self-contained HTML file with embedded data. To update:
 
-1. Edit `index.html`
+1. Edit `index.html` (update data, styling, or functionality)
 2. Test locally in your browser
 3. Commit and push:
    ```bash
    git add index.html
-   git commit -m "Update audit findings"
+   git commit -m "Update tender data and analysis"
    git push origin main
    ```
 
 GitHub Actions will automatically deploy your changes within a few minutes.
 
+### Updating Tender Data
+
+The tender data is embedded in the JavaScript section of `index.html`. Look for the `tenders` array to add or modify tender records.
+
 ## 🛠️ Technologies Used
 
-- **HTML5** — Semantic markup
-- **CSS3** — Modern styling with CSS custom properties
-- **Vanilla JavaScript** — Search and navigation functionality
+- **HTML5** — Semantic markup and structure
+- **CSS3** — Modern styling with CSS custom properties and responsive design
+- **Vanilla JavaScript** — Interactive filtering, search, and data manipulation
+- **Chart.js** — Dynamic data visualization and charts
 - **GitHub Pages** — Static site hosting
-- **GitHub Actions** — Automated deployment
+- **GitHub Actions** — Automated deployment pipeline
 
 ## 📄 License
 
@@ -140,10 +158,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Related Links
 
-- [Tendios Bid Application](https://bid.tendios.com)
-- [WCAG 2.1 Guidelines](https://www.w3.org/TR/WCAG21/)
+- [Spanish Public Procurement Platform](https://contrataciondelestado.es)
+- [Chart.js Documentation](https://www.chartjs.org/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 
 ---
 
-**Note:** This report is for internal use and documents accessibility findings as of March 2026. For questions or updates, please contact the auditor.
+**Note:** This report analyzes public tender data from Spanish procurement platforms for the year 2025. Data is aggregated and anonymized for analysis purposes. For questions or updates, please contact the report maintainer.
